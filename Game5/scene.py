@@ -102,6 +102,8 @@ class Map():
 			self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
 			self.iron.being = True
 			self.ironGroup.add(self.iron)
+
+
 	# 关卡二
 	def stage2(self):
 		for x in [2, 3, 6, 7, 18, 19, 22, 23]:

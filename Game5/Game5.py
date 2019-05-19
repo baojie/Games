@@ -88,7 +88,7 @@ def main():
 	pygame.init()
 	pygame.mixer.init()
 	screen = pygame.display.set_mode((630, 630))
-	pygame.display.set_caption("盛一诺的坦克大战")
+	pygame.display.set_caption("坦克大战")
 	# 加载图片
 	bg_img = pygame.image.load("./images/others/background.png")
 	# 加载音效
