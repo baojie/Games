@@ -112,7 +112,7 @@ def main():
 	start_sound.play()
 	# 关卡
 	stage = 0
-	num_stage = 2
+	num_stage = 3
 	# 游戏是否结束
 	is_gameover = False
 	# 时钟
@@ -528,5 +528,36 @@ def main():
 		show_end_interface(screen, 630, 630, False)
 
 
+#def test():
+    # 初始化
+   # pygame.init()
+    #pygame.mixer.init()
+    #screen = pygame.display.set_mode((630, 630))
+    #pygame.display.set_caption("坦克大战")
+
+    #stage = 3
+    #map_stage = scene.Map(stage)
+    # 加载图片
+    #bg_img = pygame.image.load("./images/others/background.png")
+
+    # 背景
+    #screen.blit(bg_img, (0, 0))
+    # 石头墙
+    #for each in map_stage.brickGroup:
+        #screen.blit(each.brick, each.rect)
+    # 钢墙
+    #for each in map_stage.ironGroup:
+        #screen.blit(each.iron, each.rect)
+    # 冰
+    #for each in map_stage.iceGroup:
+       # screen.blit(each.ice, each.rect)
+    # 河流
+    #for each in map_stage.riverGroup:git
+       # screen.blit(each.river, each.rect)
+    # 树
+    #for each in map_stage.treeGroup:
+       # screen.blit(each.tree, each.rect)
+
 if __name__ == '__main__':
-	main()
+	 main()
+	#test()

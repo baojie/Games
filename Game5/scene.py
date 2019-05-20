@@ -66,8 +66,10 @@ class Map():
 			self.stage1()
 		elif stage == 2:
 			self.stage2()
+		elif stage == 3:
+			self.stage3()
 	# 关卡一
-	def stage1(self):
+	def stage3(self):
 		for x in [2, 3, 6, 7, 18, 19, 22, 23]:
 			for y in [2, 3, 4, 5, 6, 7, 8, 9, 10, 17, 18, 19, 20, 21, 22, 23]:
 				self.brick = Brick()
@@ -102,8 +104,6 @@ class Map():
 			self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
 			self.iron.being = True
 			self.ironGroup.add(self.iron)
-
-
 	# 关卡二
 	def stage2(self):
 		for x in [2, 3, 6, 7, 18, 19, 22, 23]:
@@ -140,6 +140,93 @@ class Map():
 			self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
 			self.iron.being = True
 			self.ironGroup.add(self.iron)
+	# 关卡三
+	def stage1(self):
+		for x in [2, 3, 6, 7,  18, 19, 22, 23]:
+			for y in [18, 19, 20, 21, 22, 23, 24, 25]:
+				self.brick = Brick()
+				self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+				self.brick.being = True
+				self.brickGroup.add(self.brick)
+		for x in [2, 3,  22, 23,]:
+			for y in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ]:
+				self.river = River()
+				self.river.rect.left, self.river.rect.top = 3 + x * 24, 3 + y * 24
+				self.river.being = True
+				self.riverGroup.add(self.river)
+		for x in [4, 5, 20, 21,]:
+			 for y in [22, 23, 24, 25]:
+				 self.river = River()
+				 self.river.rect.left, self.river.rect.top = 3 + x * 24, 3 + y * 24
+				 self.river.being = True
+				 self.riverGroup.add(self.river)
+		for x in [12, 13]:
+			for y in [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]:
+				self.iron = Iron()
+				self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
+				self.iron.being = True
+				self.ironGroup.add(self.iron)
+		for x ,y in [(0,15), (1,15),(24,15),(25,15) ]:
+			self.iron = Iron()
+			self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
+			self.iron.being = True
+			self.ironGroup.add(self.iron)
+		for x,y  in [(11,25), (11,24), (11,23), (12,23), (13,23), (14, 23), (14,24), (14,25)]:
+			self.brick = Brick()
+			self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+			self.brick.being = True
+			self.brickGroup.add(self.brick)
+		for x in [4, 5, 6, 7, 18, 19, 20, 21]:
+			for y in [14,15]:
+				self.brick = Brick()
+				self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+				self.brick.being = True
+				self.brickGroup.add(self.brick)
+		for x ,y in [(7,4), (8,4), (17,4), (18,4)]:
+			self.iron = Iron()
+			self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
+			self.iron.being = True
+			self.ironGroup.add(self.iron)
+		for x in [6, 7, 8, 9, 16, 17, 18, 19]:
+			for y in [5, 6, 7]:
+				self.iron = Iron()
+				self.iron.rect.left, self.iron.rect.top = 3 + x * 24, 3 + y * 24
+				self.iron.being = True
+				self.ironGroup.add(self.iron)
+		for x in [8, 9, 10 ,11, 14, 15, 16, 17]:
+			for y in [ 14, 15]:
+				self.tree = Tree()
+				self.tree.rect.left, self.tree.rect.top = 3 + x * 24, 3 + y * 24
+				self.tree.being = True
+				self.treeGroup.add(self.tree)
+		for x in [8, 9, 10, 11, 14, 15, 16, 17]:
+			for y in [16,17 ]:
+				self.brick = Brick()
+				self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+				self.brick.being = True
+				self.brickGroup.add(self.brick)
+		for x in [4, 5, 6, 7 ,18, 19, 20, 21]:
+			for y in [14, 15]:
+				self.brick = Brick()
+				self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+				self.brick.being = True
+				self.brickGroup.add(self.brick)
+		for x in [10, 11, 14, 15]:
+			for y in [12, 13]:
+				self.brick = Brick()
+				self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+				self.brick.being = True
+				self.brickGroup.add(self.brick)
+		for x in [4, 5, 6, 7, 18, 19, 20, 21]:
+			for y in [9, 10]:
+				self.brick = Brick()
+				self.brick.rect.left, self.brick.rect.top = 3 + x * 24, 3 + y * 24
+				self.brick.being = True
+				self.brickGroup.add(self.brick)
+
+
+
+
 	def protect_home(self):
 		for x, y in [(11, 23), (12, 23), (13, 23), (14, 23), (11, 24), (14, 24), (11, 25), (14, 25)]:
 			self.iron = Iron()
