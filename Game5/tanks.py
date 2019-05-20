@@ -50,10 +50,13 @@ class myTank(pygame.sprite.Sprite):
 		self.protected = False
 		# 子弹
 		self.bullet = Bullet()
+
+
 	# 射击
 	def shoot(self):
 		self.bullet.being = True
 		self.bullet.turn(self.direction_x, self.direction_y)
+
 		if self.direction_x == 0 and self.direction_y == -1:
 			self.bullet.rect.left = self.rect.left + 20
 			self.bullet.rect.bottom = self.rect.top - 1
@@ -68,8 +71,9 @@ class myTank(pygame.sprite.Sprite):
 			self.bullet.rect.top = self.rect.top + 20
 		else:
 			raise ValueError('myTank class -> direction value error.')
+
 		if self.level == 0:
-			self.bullet.speed = 8
+			self.bullet.speed = 20
 			self.bullet.stronger = False
 		elif self.level == 1:
 			self.bullet.speed = 12
@@ -82,6 +86,8 @@ class myTank(pygame.sprite.Sprite):
 			self.bullet.stronger = True
 		else:
 			raise ValueError('myTank class -> level value error.')
+
+
 	# 等级提升
 	def up_level(self):
 		if self.level < 3:
