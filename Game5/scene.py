@@ -68,8 +68,12 @@ class Map():
 			self.stage2()
 		elif stage == 3:
 			self.stage3()
+		elif stage == 4:
+			self.stage4()
+		elif stage == 5:
+			self.stage5()
 	# 关卡一
-	def stage5(self):
+	def stage1(self):
 		for x in [2, 3, 6, 7, 18, 19, 22, 23]:
 			for y in [2, 3, 4, 5, 6, 7, 8, 9, 10, 17, 18, 19, 20, 21, 22, 23]:
 				self.brick = Brick()
@@ -291,7 +295,7 @@ class Map():
 		self.protect_home()
 
 #关卡五
-	def stage1(self):
+	def stage5(self):
 		for x in  (2, 23):
 			for y in (4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ):
 				self.brick = Brick()
