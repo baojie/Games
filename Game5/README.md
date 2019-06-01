@@ -2,6 +2,7 @@
 ttps://github.com/wewe-cat/Games
 
 # Environment(Tested)
+- Ubuntu Linux 16.10 
 - Windows10
 - Python3.5+(have installed necessary dependencies)
 
